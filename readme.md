@@ -10,8 +10,18 @@ Adaverse une plateforme de partage pour les différents projets des étudiants d
 - Création du fichier readme.md
 - Installation de l'environnement Next.js
 - Installation de l'ORM Drizzle
-- Création et mise en communication de la bdd serverless sur Neon
-- Conception de la bdd
+- Initiation communication de la bdd serverless sur Neon
+- Conception du wireframe (voir conception/wireframe.excalidraw)
+- Conception théorique de la bdd
 
 ## Liste des tâches restantes :
-- Conception du wireframe
+- Création des branches
+- Initiation du CRUD avec Drizzle
+- Création des routes
+- Création d’une seed de données
+- Création du formulaire en pop-up
+- Création de la page d'accueil
+- Création de la page de détails
+- Création des chemins dynamiques en front
+- Application du style avec Tailwind
+- 
