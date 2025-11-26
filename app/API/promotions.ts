@@ -1,7 +1,7 @@
 'use server';
 
-import { db } from '@/src/db';
-import { promotions } from '@/src/schema';
+import { db } from '@/lib/db';
+import { promotions } from '@/lib/schema';
 
 export async function getPromotions() {
     console.log("Début de l'action : getPromotions");

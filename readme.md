@@ -20,10 +20,13 @@ Adaverse une plateforme de partage pour les différents projets des étudiants d
 - Création des routes GET et POST dans /app/actions
 - Création du formulaire AddProjectForm.tsx pour soumettre un nouveau projet
 - Ajout des menus déroulants promotionId et categoryId, qui utilisent GET pour générer les options
+- Créer les sections dynamiques (l'admin pourra ajouter de nouvelles catégories)
+
+### 26/11/2025
+- Création de la page d'accueil
+- Création du ProjectsSlideshow pour afficher les miniatures des projets
 
 ## Liste des tâches restantes :
-- Création de la page d'accueil
-- Créer les sections dynamiques (l'admin pourra ajouter de nouvelles catégories)
 - Création de la page de détails
 - Création des chemins dynamiques en front
 - Application du style avec Tailwind

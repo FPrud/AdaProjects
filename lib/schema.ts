@@ -24,9 +24,7 @@ export const projects = pgTable('projects', {
     id: serial('id').primaryKey(),
     title: text('title').notNull(),
     path: text('path').notNull(),
-    // Clé étrangère vers la table 'promotions'
     promotionId: integer('promotion_id').references(() => promotions.id).notNull(),
-    // Clé étrangère vers la table 'categories'
     categoryId: integer('category_id').references(() => categories.id).notNull(),
     repositoryUrl: text('repository_url').notNull(),
     demoUrl: text('demo_url').notNull(),

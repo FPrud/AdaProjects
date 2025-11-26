@@ -1,10 +1,16 @@
-import Image from "next/image";
+import Link from "next/link";
 import { AddProjectForm } from "./components/AddProjectForm";
+import ProjectsSlideshow from "./components/ProjectsSlideshow";
 
-export default function Home() {
+export default async function Home() {
+
   return (
     <main>
+
+      <ProjectsSlideshow />
+
       <AddProjectForm />
+
     </main>
   );
 }

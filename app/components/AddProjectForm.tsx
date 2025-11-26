@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { createProject } from "@/app/actions/projects";
-import { getCategories } from "../actions/categories";
-import { getPromotions } from "../actions/promotions";
+import { createProject } from "@/app/API/projects";
+import { getCategories } from "../API/categories";
+import { getPromotions } from "../API/promotions";
 
 interface Item {
     id: number;

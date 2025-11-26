@@ -11,3 +11,13 @@
     --foreground: #ededed;
   }
 }
+
+div {
+  border: 1px solid
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

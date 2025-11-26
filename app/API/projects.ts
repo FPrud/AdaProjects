@@ -1,8 +1,7 @@
 'use server';
 
-import { db } from '@/src/db';
-import { projects, NewProject } from '@/src/schema'
-import { sql } from 'drizzle-orm'; // Ajouté pour la vérification des IDs
+import { db } from '@/lib/db';
+import { projects, NewProject, categories, promotions } from '@/lib/schema'
 
 const generatePath = (title: string): string => {
     const titleWithoutAccents = title
@@ -17,8 +16,7 @@ const generatePath = (title: string): string => {
     return cleanedPath;
 };
 
-export async function createProject(formData: FormData) {
-    console.log("Début de l'action : createProject");
+export async function createProject(formData: FormData) {;
 
     const title = formData.get('title') as string;
     const promotionId = parseInt(formData.get('promotionId') as string);
@@ -79,7 +77,18 @@ export async function getProjects() {
     console.log("Début de l'action : getProjects");
 
     try {
-        const allProjects = await db.select().from(projects);
+    const allProjects = await db.select({
+        id: projects.id,
+        title: projects.title,
+        promotionName: promotions.name,
+        categoryName: categories.name,
+        repositoryUrl: projects.repositoryUrl,
+        demoUrl: projects.demoUrl,
+        creationDate: projects.creationDate
+    })
+        .from(projects)
+        .leftJoin(categories, eq(projects.categoryId, categories.id))
+        .leftJoin(promotions, eq(projects.promotionId, promotions.id));
         return {
             success: true,
             data: allProjects
