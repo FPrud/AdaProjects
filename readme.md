@@ -26,6 +26,12 @@ Adaverse une plateforme de partage pour les différents projets des étudiants d
 - Création de la page d'accueil
 - Création du ProjectsSlideshow pour afficher les miniatures des projets
 
+## 27/11/2025
+- Refacto des fonctions GET
+- Mise en page de ProjectSlideshow : map des catégories et map des projets
+- Filtre des projets qui n'apparaissent que dans la bonne catégorie
+- Apparition conditionnelle des catégories, si elles ne sont pas vides
+
 ## Liste des tâches restantes :
 - Création de la page de détails
 - Création des chemins dynamiques en front

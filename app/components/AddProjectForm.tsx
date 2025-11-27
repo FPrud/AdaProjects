@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { createProject } from "@/app/API/projects";
-import { getCategories } from "../API/categories";
-import { getPromotions } from "../API/promotions";
+import { createProject } from "../api/projects";
+import { getCategories } from "../api/categories";
+import { getPromotions } from "../api/promotions";
 
 interface Item {
     id: number;
@@ -36,8 +36,8 @@ export const AddProjectForm = () => {
 
     return (
         <form action={handleSubmit} className="flex flex-col w-100 text-center">
-            
-            
+
+
             <input type="text" name="title" placeholder="Nom du projet" required />
 
             <select name="promotionId" required>

@@ -1,7 +1,8 @@
-'use server';
+"use server";
 
 import { db } from '@/lib/db';
 import { projects, NewProject, categories, promotions } from '@/lib/schema'
+import { eq } from 'drizzle-orm';
 
 const generatePath = (title: string): string => {
     const titleWithoutAccents = title
@@ -16,7 +17,8 @@ const generatePath = (title: string): string => {
     return cleanedPath;
 };
 
-export async function createProject(formData: FormData) {;
+export async function createProject(formData: FormData) {
+    ;
 
     const title = formData.get('title') as string;
     const promotionId = parseInt(formData.get('promotionId') as string);
@@ -77,18 +79,19 @@ export async function getProjects() {
     console.log("Début de l'action : getProjects");
 
     try {
-    const allProjects = await db.select({
-        id: projects.id,
-        title: projects.title,
-        promotionName: promotions.name,
-        categoryName: categories.name,
-        repositoryUrl: projects.repositoryUrl,
-        demoUrl: projects.demoUrl,
-        creationDate: projects.creationDate
-    })
-        .from(projects)
-        .leftJoin(categories, eq(projects.categoryId, categories.id))
-        .leftJoin(promotions, eq(projects.promotionId, promotions.id));
+        const allProjects = await db.select({
+            id: projects.id,
+            title: projects.title,
+            promotionName: promotions.name,
+            categoryName: categories.name,
+            repositoryUrl: projects.repositoryUrl,
+            demoUrl: projects.demoUrl,
+            creationDate: projects.creationDate
+        })
+            .from(projects)
+            .leftJoin(categories, eq(projects.categoryId, categories.id))
+            .leftJoin(promotions, eq(projects.promotionId, promotions.id));
+
         return {
             success: true,
             data: allProjects

@@ -10,7 +10,7 @@ import {
 export const promotions = pgTable('promotions', {
     id: serial('id').primaryKey(),
     name: text('name').notNull(),
-    startingYear: date('starting_year').notNull(),
+    beginning: date('beginning').notNull(),
 });
 
 // --- Table 'categories' ---

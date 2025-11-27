@@ -1,4 +1,4 @@
-'use server';
+"use server";
 
 import { db } from '@/lib/db';
 import { categories } from '@/lib/schema';
@@ -8,7 +8,7 @@ export async function getCategories() {
         const allCategories = await db.select({
             id: categories.id,
             name: categories.name
-        }).from(categories)
+        }).from(categories);
 
         return {
             success: true,

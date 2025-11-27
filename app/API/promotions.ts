@@ -1,13 +1,17 @@
-'use server';
+"use server";
 
 import { db } from '@/lib/db';
 import { promotions } from '@/lib/schema';
 
 export async function getPromotions() {
     console.log("Début de l'action : getPromotions");
-    
+
     try {
-        const allPromotions = await db.select().from(promotions);
+        const allPromotions = await db.select({
+            id: promotions.id,
+            name: promotions.name,
+            beginning: promotions.beginning
+        }).from(promotions);
 
         return {
             success: true,
@@ -15,7 +19,7 @@ export async function getPromotions() {
         };
     } catch (error) {
         console.error("Erreur lors de la récupération des promotions :", error);
-        
+
         return {
             success: false,
             error: "Échec de la récupération des promotions. Vérifiez la connexion à la base de données."

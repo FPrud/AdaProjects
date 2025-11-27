@@ -21,3 +21,8 @@ main {
   flex-direction: column;
   gap: 10px;
 }
+
+a {
+  text-decoration:underline;
+  font-weight:500;
+}
