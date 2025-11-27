@@ -58,7 +58,7 @@ export const ProjectsSlideshow = () => {
                     <div key={category.id} className="flex flex-col">
                         <h1 id="categoryTitle">{category.name}</h1>
 
-                        <div id="projectsContainer" className="flex-row no-wrap">
+                        <div id="projectsContainer" className="flex flex-row no-wrap">
                             {filteredProjects.map((project) => (
                                 <div key={project.id} id="project" className="flex flex-col w-[250px]">
                                     <h2>{project.title}</h2>
@@ -77,32 +77,5 @@ export const ProjectsSlideshow = () => {
             <br />
         </div>
 
-
-        // <div id="projectsSlideshow" className="flex flex-col">
-        //     {categories.map((category) => (
-        //         <div key={category.id} className="flex flex-col">
-        //             <h1 id="categoryTitle">{category.name}</h1>
-
-        //             <div id="projectsContainer" className="flex flex-row no-wrap">
-        //                 {projects
-        //                     .filter(project => project.categoryName === category.name)
-        //                     .map((project) => (
-        //                         <div key={project.id} id="project" className="flex flex-col w-[250px]">
-        //                             <h2>{project.title}</h2>
-        //                             <img src="http://img.png" width="200px" height="120px" />
-        //                             <p>Crée le {project.creationDate} par un·e élève de la promotion {project.promotionName} dans le cadre du projet {project.categoryName}</p>
-        //                             <p id="projectInfos" className="flex flex-col">
-        //                                 <a href={project.repositoryUrl}>Consulter le répertoire</a>
-        //                                 <a href={project.demoUrl}>Essayer la démo</a>
-        //                             </p>
-        //                         </div>
-        //                     ))}
-
-        //             </div>
-        //         </div>
-        //     ))}
-        //     <br />
-
-        // </div>
     );
 }

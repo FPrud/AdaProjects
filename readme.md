@@ -33,6 +33,8 @@ Adaverse une plateforme de partage pour les différents projets des étudiants d
 - Apparition conditionnelle des catégories, si elles ne sont pas vides
 
 ## Liste des tâches restantes :
+- Création d'une image placeholder
+- Récupération d'un fichier image nommé '/blob/main/thumbnail.png?raw=true', ajouté à l'url du repo githhub
 - Création de la page de détails
 - Création des chemins dynamiques en front
 - Application du style avec Tailwind
