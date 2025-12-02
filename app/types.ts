@@ -2,6 +2,8 @@ export interface projectItem {
     id: number;
     title: string;
     path: string;
+    promotionId: number;
+    categoryId: number;
     promotionName: string;
     categoryName: string;
     repositoryUrl: string;
@@ -17,6 +19,12 @@ export interface ProjectCardProps {
 export interface categoryItem {
     id: number;
     name: string;
+}
+
+export interface promotionItem {
+    id: number;
+    name: string;
+    beginning: string
 }
 
 export interface Item {

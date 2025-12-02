@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { createProject } from "../api/projects";
 import { getCategories } from "../api/categories";
 import { getPromotions } from "../api/promotions";
-import {Item} from "../types";
+import { Item } from "../types";
 
 export const AddProjectForm = () => {
 
@@ -31,6 +31,8 @@ export const AddProjectForm = () => {
     };
 
     return (
+        
+
         <form action={handleSubmit} className="flex flex-col w-100 text-center">
 
 

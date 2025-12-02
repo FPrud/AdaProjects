@@ -33,7 +33,6 @@ export async function createProject(formData: FormData) {
     const categoryId = parseInt(formData.get('categoryId') as string);
     const repositoryUrl = formData.get('repositoryUrl') as string;
     const demoUrl = formData.get('demoUrl') as string;
-
     const tempPath = generatePath(title);
     const creationDate = new Date().toISOString().split('T')[0];
 
@@ -107,6 +106,7 @@ export async function getProjects() {
             id: projects.id,
             title: projects.title,
             path: projects.path,
+            promotionId: projects.promotionId,
             promotionName: promotions.name,
             categoryName: categories.name,
             repositoryUrl: projects.repositoryUrl,
