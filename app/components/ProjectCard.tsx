@@ -22,7 +22,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, slicedTitle }
         setImageSrc(thumbnailUrl);
     }, [thumbnailUrl]);
 
-
     return (
         <div id="project" className="flex flex-col w-[360px] h-3xs p-2 bg-linear-to-tr from-[#F5EBE0] to-[#fffff]">
             <Link href={`/${project.path}`}><h3>{slicedTitle(project.title, 30)}</h3>

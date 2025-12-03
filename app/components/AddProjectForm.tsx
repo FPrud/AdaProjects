@@ -16,6 +16,8 @@ export const AddProjectForm: React.FC<AddProjectFormProps> = ({ onSuccess }) => 
     const [categories, setCategories] = useState<Item[]>([]);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
+
+    // récupérer les promotions et les catégories
     useEffect(() => {
         const loadData = async () => {
             const promotionsResult = await getPromotions();
@@ -31,6 +33,7 @@ export const AddProjectForm: React.FC<AddProjectFormProps> = ({ onSuccess }) => 
         loadData();
     }, []);
 
+    // envoyer un projet à la db
     const handleSubmit = async (formData: FormData) => {
         setIsSubmitting(true);
 

@@ -3,24 +3,18 @@
 
 @import "tailwindcss";
 
+body {
+  background-color: #fefefe;
+}
 
 :root {
-  --background: #EDEDE9;
+  --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 div {
-  border: 1px solid;
-  border-color: white;
   border-radius: 5px;
-}
+} 
 
 main {
   display: flex;

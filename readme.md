@@ -47,5 +47,3 @@ Adaverse une plateforme de partage pour les différents projets des étudiants d
 ## 03/12/2025
 - Affichage des projet dans l'ordre anti-chronologique (plus récent en premier)
 - Application du style avec Tailwind
-
-## Liste des tâches restantes :
