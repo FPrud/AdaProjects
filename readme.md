@@ -1,6 +1,6 @@
 # Adaverse
 
-Adaverse une plateforme de partage pour les différents projets des étudiants d'Ada Tech School. L'objectif est de rassembler chaque projet de chaque promo de l'école, et les rendre accessibles depuis une galerie. L'enjeu est de concevoir la base de donnée, ses communications avec le serveur, et la mise en page de la plateforme.
+Adaverse est une plateforme de partage pour les différents projets des étudiants d'Ada Tech School. L'objectif est de rassembler chaque projet de chaque promo de l'école, et les rendre accessibles depuis une galerie. L'enjeu est de concevoir la base de donnée, ses communications avec le serveur, et la mise en page de la plateforme.
 
 ## Journal de réalisation
 
